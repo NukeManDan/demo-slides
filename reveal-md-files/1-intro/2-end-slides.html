@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Ethereum Roadmap</title>
+    <meta property="og:title" content="Ethereum Roadmap" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://localhost:3000/featured-slide.jpg" />
+    <meta property="og:url" content="http://localhost:3000" />
+    <link rel="shortcut icon" href="./../reveal-md-files/favicon.ico" />
+    <link rel="stylesheet" href="./../reveal-md-files/dist/reset.css" />
+    <link rel="stylesheet" href="./../reveal-md-files/dist/reveal.css" />
+    <link rel="stylesheet" href="./../reveal-md-files/styles/nuke-theme.css" id="theme" />
+    <link rel="stylesheet" href="./../reveal-md-files/css/highlight/shades-of-purple.css" />
+
+    <link rel="stylesheet" href="./../reveal-md-files/_assets/styles/nuke-theme.css" />
+    <link rel="stylesheet" href="./../reveal-md-files/_assets/plugin/design-system/index.css" />
+
+  </head>
+  <body class="site">
+    <header class="site-header">
+      <a href="http://localhost:3000">
+        <img class="watermark-logo" src="./../reveal-md-files/assets/img/shared/logo/cryptorado-white.svg" alt="Back to all slides">
+      </a>
+    </header>
+    <main class="site-reveal reveal">
+      <article class="slides">
+        <section  data-markdown><script type="text/template">
+
+# End
+</script></section>
+      </article>
+    </main>
+
+    <script src="./../reveal-md-files/dist/reveal.js"></script>
+    <script src="./../reveal-md-files/plugin/markdown/markdown.js"></script>
+    <script src="./../reveal-md-files/plugin/highlight/highlight.js"></script>
+    <script src="./../reveal-md-files/plugin/zoom/zoom.js"></script>
+    <script src="./../reveal-md-files/plugin/notes/notes.js"></script>
+    <script src="./../reveal-md-files/plugin/math/math.js"></script>
+
+    <script type="module">
+      import DesignSystem from "./../reveal-md-files/plugin/design-system/design-system.js"
+
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath,
+          DesignSystem
+        ]
+      };
+
+      // options from URL query string
+      const queryOptions = Reveal().getQueryHash() || {};
+
+      const options = extend(defaultOptions, {"width":1400,"height":900,"margin":0,"minScale":0.2,"maxScale":2,"transition":"none","controls":true,"progress":true,"center":true,"slideNumber":true,"backgroundTransition":"fade"}, queryOptions);
+      options.baseUrl = 'http://localhost:3000';
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

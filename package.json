@@ -1,0 +1,17 @@
+{
+  "name": "pba-content",
+  "version": "1.0.0",
+  "description": "PBA slides content",
+  "author": "Parity Tech",
+  "license": "TBD",
+  "private": true,
+  "workspaces": [
+    "reveal-md-files"
+  ],
+  "scripts": {
+    "help": "yarn --cwd ./reveal-md-files/ run help",
+    "format": "prettier --config .prettierrc.js --write '**/*.md'",
+    "format:code": "prettier --config .prettierrc.js --write '{**/*.{rs,js,ts,json},!**/*.md}'"
+  },
+  "packageManager": "yarn@3.2.2"
+}
